@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style type="text/css">
+        body {
+            /* background: #efefef; */
+            background-image: url("image/247129.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 62.5%;
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            color: #B6B6B6;
+        }
+
+        body section {
+            background: rgb(170, 197, 218);
+            margin: 30px auto 120px;
+            /* border-top: 15px solid #313A3D; */
+            text-align: center;
+            padding: 10px 0 40px;
+            width: 50%;
+            max-width: 1100px;
+            border-radius: 1%;
+        }
+
+        body section h1 {
+            margin-bottom: 40px;
+            font-size: 4em;
+            text-transform: uppercase;
+            font-family: "Lato", sans-serif;
+            font-weight: 100;
+            color: #313A3D;
+        }
+
+        #hire form {
+            width: 58.3333333333%;
+            margin: 0 auto;
+        }
+
+        #hire form .field {
+            width: 100%;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        #hire form .field label {
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #313A3D;
+            width: 100%;
+            border-radius: 10px;
+            padding: 18px 0;
+            font-size: 1.45em;
+            letter-spacing: 0.075em;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+        }
+
+        #hire form .field label+span {
+            font-family: "SSStandard";
+            opacity: 0;
+            color: white;
+            display: block;
+            position: absolute;
+            top: 12px;
+            border-radius: 10px;
+            left: 7%;
+            font-size: 2.5em;
+            text-shadow: 1px 2px 0 #cd6302;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+        }
+
+        #hire form .field input[type=text],
+        #hire form .field textarea {
+            border: none;
+            background: #E8E9EA;
+            width: 80.5%;
+            margin: 0;
+            padding: 18px 0;
+            padding-left: 19.5%;
+            color: #313A3D;
+            font-size: 1.4em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        #hire form .field input[type=text]#msg,
+        #hire form .field textarea#msg {
+            height: 18px;
+            resize: none;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+        }
+
+        #hire form .field input[type=text]:focus,
+        #hire form .field input[type=text].focused,
+        #hire form .field textarea:focus,
+        #hire form .field textarea.focused {
+            outline: none;
+        }
+
+        #hire form .field input[type=text]:focus#msg,
+        #hire form .field input[type=text].focused#msg,
+        #hire form .field textarea:focus#msg,
+        #hire form .field textarea.focused#msg {
+            padding-bottom: 150px;
+        }
+
+        #hire form .field input[type=text]:focus+label,
+        #hire form .field input[type=text].focused+label,
+        #hire form .field textarea:focus+label,
+        #hire form .field textarea.focused+label {
+            width: 18%;
+            background: #FD9638;
+            color: #313A3D;
+        }
+
+        #hire form .field input[type=text].focused+label,
+        #hire form .field textarea.focused+label {
+            color: #FD9638;
+        }
+
+        #hire form .field:hover label {
+            width: 18%;
+            background: #313A3D;
+            color: white;
+        }
+
+        #hire form input[type=submit] {
+            background: #FD9638;
+            color: white;
+            -webkit-appearance: none;
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 13px 50px;
+            font-size: 1.4em;
+            letter-spacing: 0.1em;
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+        }
+
+        #hire form input[type=submit]:hover {
+            background: #313A3D;
+            color: #FD9638;
+        }
+
+        #hire form input[type=submit]:focus {
+            outline: none;
+            background: #cd6302;
+        }
+
+        a {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mx-auto ">
+        <a class="navbar-brand" href="#">Mbooker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="movie.html">Movies</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="trail_theter_booking.html">T-Book</a>
+                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">user</a>
+                </li>
+
+
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0 ml-5">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+
+
+
+
+    <section id="hire">
+        <h1>Contact Us</h1>
+
+        <form>
+            <div class="field name-box">
+                <input type="text" id="name" placeholder="Who Are You?" />
+                <label for="name">Name</label>
+                <span class="ss-icon">check</span>
+            </div>
+
+            <div class="field email-box">
+                <input type="text" id="email" placeholder="name@email.com" />
+                <label for="email">Email</label>
+                <span class="ss-icon">check</span>
+            </div>
+
+            <div class="field msg-box">
+                <textarea id="msg" rows="4" placeholder="Your message goes here..."></textarea>
+                <label for="msg">Msg</label>
+                <span class="ss-icon">check</span>
+            </div>
+            <br>
+            <input class="button" type="submit" value="Send" />
+        </form>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        // Input Lock
+        $('textarea').blur(function () {
+            $('#hire textarea').each(function () {
+                $this = $(this);
+                if (this.value != '') {
+                    $this.addClass('focused');
+                    $('textarea + label + span').css({ 'opacity': 1 });
+                }
+                else {
+                    $this.removeClass('focused');
+                    $('textarea + label + span').css({ 'opacity': 0 });
+                }
+            });
+        });
+
+        $('#hire .field:first-child input').blur(function () {
+            $('#hire .field:first-child input').each(function () {
+                $this = $(this);
+                if (this.value != '') {
+                    $this.addClass('focused');
+                    $('.field:first-child input + label + span').css({ 'opacity': 1 });
+                }
+                else {
+                    $this.removeClass('focused');
+                    $('.field:first-child input + label + span').css({ 'opacity': 0 });
+                }
+            });
+        });
+
+        $('#hire .field:nth-child(2) input').blur(function () {
+            $('#hire .field:nth-child(2) input').each(function () {
+                $this = $(this);
+                if (this.value != '') {
+                    $this.addClass('focused');
+                    $('.field:nth-child(2) input + label + span').css({ 'opacity': 1 });
+                }
+                else {
+                    $this.removeClass('focused');
+                    $('.field:nth-child(2) input + label + span').css({ 'opacity': 0 });
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

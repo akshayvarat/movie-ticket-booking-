@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>theater booking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url("image/247129.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .screen {
+            height: 70px;
+            width: 100%;
+            background-color: #000000;
+            border: 2px solid black;
+            color: aliceblue;
+            text-align: center;
+            box-shadow: 7px 7px 15px 2px #000000;
+        }
+
+        .seats {
+            height: 30px;
+            width: 40px;
+            background-color: grey;
+            display: inline-block;
+            margin: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card {
+            box-sizing: border-box;
+            box-shadow: 10px 7px 20px 10px #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" id="unameshow" href="#">Mbooker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="movie.html">movie</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">T-Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">user</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="logout()" href="#">logout</a>
+                </li>
+
+
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+    <div class="container ">
+        <div class="row">
+            <div class="col col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <div class="card mt-5 mt-lg-0 mt-xl-5">
+                   
+                    <div class="card-body">
+                        <div class="screen">Your Eyes Here</div>
+                    </div>
+                    <div class="row mx-auto mt-5">
+                        <div class="col ">   
+                            <div class="seats" id="div1" value="100"> 1</div>
+                            <div class="seats" id="div2" value="100"> 2</div>
+                            <div class="seats" id="div3" value="100"> 3</div>
+                            <div class="seats" id="div4" value="100"> 4</div>
+                            <div class="seats" id="div5" value="100"> 5</div>
+                            <div class="seats" id="div6" value="100"> 6</div>
+                            <div class="seats" id="div7" value="100"> 7</div>
+                            <div class="seats" id="div8" value="100"> 8</div>
+                            <div class="seats" id="div9" value="100"> 9</div>
+                            <div class="seats" id="div10" value="100">10</div>
+                        </div>
+                    </div>
+                    <div class="row mx-auto mt-5">
+                        <div class="col ">
+                            <div class="seats" id="div11" value="100">11</div>
+                            <div class="seats" id="div12" value="100">12</div>
+                            <div class="seats" id="div13" value="100">13</div>
+                            <div class="seats" id="div14" value="100">14</div>
+                            <div class="seats" id="div15" value="100">15</div>
+                            <div class="seats" id="div16" value="100">16</div>
+                            <div class="seats" id="div17" value="100">17</div>
+                            <div class="seats" id="div18" value="100">18</div>
+                            <div class="seats" id="div19" value="100">19</div>
+                            <div class="seats" id="div20" value="100">20</div>
+                        </div>
+                    </div>
+                    <div class="row mx-auto ">
+                        <div class="col ">
+                            <div class="seats" id="div21" value="100">21</div>
+                            <div class="seats" id="div22" value="100">22</div>
+                            <div class="seats" id="div23" value="100">23</div>
+                            <div class="seats" id="div24" value="100">24</div>
+                            <div class="seats" id="div25" value="100">25</div>
+                            <div class="seats" id="div26" value="100">26</div>
+                            <div class="seats" id="div27" value="100">27</div>
+                            <div class="seats" id="div28" value="100">28</div>
+                            <div class="seats" id="div29" value="100">29</div>
+                            <div class="seats" id="div30" value="100">30</div>
+                        </div>
+                        
+                    </div>
+                    <div class="row mx-auto mt-5">
+                        <div class="col ">
+                            <div class="seats" id="div32" value="200">31</div>
+                            <div class="seats" id="div33" value="200">32</div>
+                            <div class="seats" id="div31" value="200">33</div>
+                            <div class="seats" id="div34" value="200">34</div>
+                            <div class="seats" id="div35" value="200">35</div>
+                            <div class="seats" id="div36" value="200">36</div>
+                            <div class="seats" id="div37" value="200">37</div>
+                            <div class="seats" id="div38" value="200">38</div>
+                            <div class="seats" id="div39" value="200">39</div>
+                            <div class="seats" id="div40" value="200">40</div>
+                        </div>
+                    </div>
+                    <div class="row mx-auto mb-5 ">
+                        <div class="col ">
+                            <div class="seats" id="div42" value="200">41</div>
+                            <div class="seats" id="div43" value="200">42</div>
+                            <div class="seats" id="div41" value="200">43</div>
+                            <div class="seats" id="div44" value="200">44</div>
+                            <div class="seats" id="div45" value="200">45</div>
+                            <div class="seats" id="div46" value="200">46</div>
+                            <div class="seats" id="div47" value="200">47</div>
+                            <div class="seats" id="div48" value="200">48</div>
+                            <div class="seats" id="div49" value="200">49</div>
+                            <div class="seats" id="div50" value="200">50</div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- bill -->
+            <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                <div class="card mb-sm-5 mt-lg-0 mt-xl-5 mt-4">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center" id="mname">movie name</h5>
+                        <br>
+                        <span>Date of Movie: </span>
+                        <input type="date" class="form-control" id="dateis">
+                        <br>
+                        <span>Time to watch: </span>
+                        <input type="time" class="form-control" id="timeis">
+                        <br>
+                        <span>Selected seat: </span><h3 id="selectseat">0</h3>
+                        <br>
+                        <span>Total bill:</span><h2 id="totalbill">0</h2>
+                        <br>
+                        <div class="footer">
+                            <button class="btn btn-primary btn-block " id="save">Book Now!</button>
+                            <div id="output"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="modeout">
+
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        var totalSeatSelectedCount;
+        var seats;
+        var count;
+        var btn;
+        // var setMovie;
+        // var selectMovie;
+
+        // this is check to the when the login key is created or not...
+        var useridis=JSON.parse(localStorage.getItem("login"));
+        document.getElementById("unameshow").innerHTML=useridis;
+
+        // movie name from the local storege..
+        var moviedata=JSON.parse(localStorage.getItem("moviedata"));
+        document.getElementById("mname").innerHTML=moviedata[0].moviname;
+        console.log(moviedata);
+        
+        var setMovie=useridis+moviedata[0].moviname;
+        var selectMovie=moviedata[0].price;
+
+        // console.log(selectMovie);
+        // console.log(setMovie);
+        
+        if (useridis==null) {
+            window.location="user.html";
+        } 
+        else{
+            var alreadydata = localStorage.getItem(`${setMovie}`);
+            alreadydata = JSON.parse(alreadydata);
+            // console.log(data);
+            if (alreadydata !== null) {
+                
+                for (let i = 0; i < alreadydata.length; i++) {
+                    document.getElementById(alreadydata[i]).classList.add("bg-info");
+                    console.log(alreadydata[i]);
+                    
+                }
+            }
+        }
+        
+        btn = document.querySelector("#save");
+       
+        movieSeats = document.querySelector(".container");
+        
+        movieSeats.addEventListener("click", function (e) {
+            if (e.target.classList.contains("seats")) {
+                e.target.classList.toggle("bg-warning");
+                totalSeatSelectedCount = document.querySelectorAll(".bg-warning");  
+            }
+            
+            count = totalSeatSelectedCount.length * selectMovie;
+            seats = `${totalSeatSelectedCount.length}`;
+            document.getElementById("selectseat").innerHTML = seats;
+            document.getElementById("totalbill").innerHTML = `${count} $`;
+            
+
+        });
+
+        btn.addEventListener("click", function () {
+            var arr = [];
+            var arrbook=[];
+            totalSeatSelectedCount = document.querySelectorAll(".bg-warning");
+
+            var date=document.getElementById("dateis").value;
+            var time=document.getElementById("timeis").value;
+            var seatsval=seats;
+            var pricecount=count;
+            
+            var billobj={
+                date:date,
+                time:time,
+                seatsval:seatsval,
+                pricecount:pricecount
+            }
+
+            arrbook.push(billobj);
+
+            var bookdata = localStorage.getItem("userbooked");
+            bookdata = JSON.parse(bookdata);
+
+            if (data != null) {
+                data = data.concat(arr);
+                localStorage.setItem("userbooked", JSON.stringify(bookdata));
+                // bookwindow();
+            } else {
+                
+                localStorage.setItem("userbooked", JSON.stringify(arrbook));
+            }
+                
+
+                
+            for (i = 0; i < totalSeatSelectedCount.length; i++) {
+                // allids += totalSeatSelectedCount[i].id;
+                arr.push(totalSeatSelectedCount[i].id);
+                document.getElementById(totalSeatSelectedCount[i].id).classList.remove("bg-warning");
+                document.getElementById(totalSeatSelectedCount[i].id).classList.add("bg-danger");
+                // console.log(arr);
+            }
+            // console.log(allids);
+            movieName = selectMovie;
+          
+            // console.log(selectMovie);
+            // console.log(setMovie);
+            console.log("this is movie selector" + setMovie);
+            
+            
+            if (arr.length > 0) {
+                
+                var data = localStorage.getItem(`${setMovie}`);
+                data = JSON.parse(data);
+                if (data != null) {
+                    data = data.concat(arr);
+                    localStorage.setItem(`${setMovie}`, JSON.stringify(data));
+                } else {
+                    
+                    localStorage.setItem(`${setMovie}`, JSON.stringify(arr));
+                }
+            }
+            
+            
+            
+        });
+        
+        
+        
+        function updatedpage() {
+            
+            movieName = selectMovie;
+            
+            console.log("view is updated" + setMovie);
+            
+            
+            var data = localStorage.getItem(`${setMovie}`);
+            data = JSON.parse(data);
+            // console.log(data);
+            if (data !== null) {
+
+                for (let i = 0; i < data.length; i++) {
+                    document.getElementById(data[i]).classList.add("bg-info");
+                    // console.log(data[i]);
+
+                }
+            }
+
+        }
+        updatedpage();
+
+
+
+        function allClear() {
+
+            let allseats = document.querySelectorAll(".seats");
+            for (i = 0; i < 50; i++) {
+
+                document.getElementById(allseats[i].id).classList.remove("bg-danger");
+                console.log(allseats);
+
+            }
+        }
+
+        function logout() {
+                console.log("logout");
+                localStorage.setItem("login", "");
+                window.location =`user.html`;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
