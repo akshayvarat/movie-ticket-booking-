@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>theater booking</title>
+    <title>seat booking</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -283,10 +283,12 @@
             if (data != null) {
                 data = data.concat(arr);
                 localStorage.setItem("userbooked", JSON.stringify(bookdata));
+                window.location='./thankyou.html';
                 // bookwindow();
             } else {
                 
                 localStorage.setItem("userbooked", JSON.stringify(arrbook));
+                window.location='./thankyou.html';
             }
                 
 
@@ -313,9 +315,11 @@
                 if (data != null) {
                     data = data.concat(arr);
                     localStorage.setItem(`${setMovie}`, JSON.stringify(data));
+                    window.location='./thankyou.html';
                 } else {
                     
                     localStorage.setItem(`${setMovie}`, JSON.stringify(arr));
+                    window.location='./thankyou.html';
                 }
             }
             
